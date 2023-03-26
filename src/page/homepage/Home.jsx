@@ -1,6 +1,6 @@
 const Home = () => {
     return ( 
-        <div>
+        <section>
             <nav>
                 <header className="bg-[#F2F2F2] w-full h-32 flex">
                     <section className="flex-1 flex justify-center items-center">
@@ -16,7 +16,10 @@ const Home = () => {
                     </section>
                 </header>
             </nav>
-        </div>
+            <section>
+                <button className="w-14 h-5">Pomodoro</button>
+            </section>
+        </section>
      );
 }
  
