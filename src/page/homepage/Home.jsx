@@ -17,7 +17,12 @@ const Home = () => {
                 </header>
             </nav>
             <section>
-                <button className="w-14 h-5">Pomodoro</button>
+                <ul className="flex justify-center items-center pt-6">
+                    <li><button className="w-60 h-10 bg-[#47A6CC] hover:bg-[#3784A1] border-[#1e728c] text-white text-base">Pomodoro</button></li>
+                     <li><button className="w-60 h-10 bg-[#47A6CC] hover:bg-[#3784A1] border-[#1e728c] text-white text-base">Short Break</button></li>
+                     <li><button className="w-60 h-10 bg-[#47A6CC] hover:bg-[#3784A1] border-[#1e728c] text-white text-base">Long Break</button></li>
+                </ul>
+        
             </section>
         </section>
      );
