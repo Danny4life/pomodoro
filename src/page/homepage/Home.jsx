@@ -1,4 +1,22 @@
+import { useState } from "react";
+
+
 const Home = () => {
+
+     const [changeButton1, setChangeButton1] = useState(false);
+    const [changeButton2, setChangeButton2] = useState(false);
+     const [changeButton3, setChangeButton3] = useState(false);
+
+
+      const handleClickOne = () => {
+        setChangeButton1(!changeButton1);
+    }
+    const handleClickTwo = () => {
+        setChangeButton2(!changeButton2);
+    }
+    const handleClickThree = () => {
+        setChangeButton3(!changeButton3);
+    }
     return ( 
         <section>
             <nav>
@@ -17,10 +35,28 @@ const Home = () => {
                 </header>
             </nav>
             <section>
-                <ul className="flex justify-center items-center pt-6">
-                    <li><button className="w-60 h-10 bg-[#47A6CC] hover:bg-[#3784A1] border-[#1e728c] text-white text-base">Pomodoro</button></li>
-                     <li><button className="w-60 h-10 bg-[#47A6CC] hover:bg-[#3784A1] border-[#1e728c] text-white text-base">Short Break</button></li>
-                     <li><button className="w-60 h-10 bg-[#47A6CC] hover:bg-[#3784A1] border-[#1e728c] text-white text-base">Long Break</button></li>
+                <ul className="flex justify-center items-center pt-6">   
+                    <li><button
+                     className={`w-60 h-10 border border-[#3784A1] text-white text-base hover:bg-[#3784A1] 
+                     ${(changeButton1 === true) ? "bg-[#3784A1]" : "bg-[#47A6CC]"}`}
+                     onClick={handleClickOne}
+                     >
+                        Pomodoro
+                     </button></li>
+                     <li><button
+                     className={`w-60 h-10 border border-[#3784A1] text-white text-base hover:bg-[#3784A1] 
+                     ${(changeButton2 === true) ? "bg-[#3784A1]" : "bg-[#47A6CC]"}`}
+                     onClick={handleClickTwo}
+                     >
+                        Short Break
+                     </button></li>
+                     <li><button
+                     className={`w-60 h-10 border border-[#3784A1] text-white text-base hover:bg-[#3784A1] 
+                     ${(changeButton3 === true) ? "bg-[#3784A1]" : "bg-[#47A6CC]"}`}
+                     onClick={handleClickThree}
+                     >
+                        Long Break
+                     </button></li> 
                 </ul>
         
             </section>
