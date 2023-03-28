@@ -60,6 +60,9 @@ const Home = () => {
                 </ul>
         
             </section>
+            <div>
+                <h1 className="text-center pt-20 text-8xl font-bold">00:00</h1>
+            </div>
         </section>
      );
 }
