@@ -61,8 +61,36 @@ const Home = () => {
         
             </section>
             <div>
-                <h1 className="text-center pt-20 text-8xl font-bold">00:00</h1>
+                <h1 className="text-center pt-20 text-8xl font-bold">30:00</h1>
             </div>
+            <section>
+                <ul className="flex justify-center items-center pt-20 space-x-14">
+                    <li>
+                        <button 
+                        className="py-3 px-8 bg-green-500 hover:bg-green-900
+                         text-white border border-[#457A1A] rounded-sm font-bold"
+                        >
+                            Start
+                        </button>
+                    </li>
+                    <li>
+                        <button 
+                        className="py-3 px-8 bg-red-500 hover:bg-red-900
+                         text-white border border-[#97251E] rounded-sm font-bold"
+                        >
+                            Stop
+                        </button>
+                    </li>
+                    <li>
+                        <button 
+                        className="py-3 px-8 bg-[#D0D0D0] hover:bg-[#D0D0D0]
+                          border border-[#D0D0D0] rounded-sm font-bold"
+                        >
+                            Reset
+                        </button>
+                    </li>
+                </ul>
+            </section>
         </section>
      );
 }
