@@ -38,7 +38,7 @@ const Home = () => {
                 <ul className="flex justify-center items-center pt-6">   
                     <li><button
                      className={`w-60 h-10 border border-[#3784A1] text-white text-base hover:bg-[#3784A1] 
-                     ${(changeButton1 === true) ? "bg-[#3784A1]" : "bg-[#47A6CC]"}`}
+                     ${(changeButton1 === true) ? "bg-[#3784A1]" : "bg-red-500"}`}
                      onClick={handleClickOne}
                      >
                         Pomodoro
