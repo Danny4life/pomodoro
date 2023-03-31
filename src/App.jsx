@@ -1,6 +1,6 @@
 //import Home from "./page/homepage/Home"
 import StopTimer from "./page/timer/StopTimer"
-import { BrowserRouter, Router, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 function App() {
 
@@ -8,12 +8,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Router>
-        <Routes index="/" element={ <StopTimer />} />
-      </Router>
+      <Routes>
+        <Route index element={ <StopTimer />} />
+      </Routes>
       </BrowserRouter>
-      {/* <Home /> */}
-     
     </div>
   )
 }
