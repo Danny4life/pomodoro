@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
+import soundFile from "../../assets/alarm.mp3";
+
 
 class StopTimer extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
       minutes: 0,
       seconds: 0,
     };
+    
   }
 
   handleStart = () => {
@@ -21,6 +25,7 @@ class StopTimer extends Component {
       if (seconds === 0) {
         if (minutes === 0) {
           clearInterval(this.interval);
+          this.playSound();
         } else {
           this.setState(({ minutes }) => ({
             minutes: minutes - 1,
@@ -50,9 +55,14 @@ class StopTimer extends Component {
     this.setState({ seconds: e.target.value });
   };
 
+  playSound = () => {
+    const audio = new Audio(soundFile);
+    audio.play();
+  }
+
+
   render() {
     const { minutes, seconds } = this.state;
-
     return (
       <div>
         <nav>
@@ -66,7 +76,6 @@ class StopTimer extends Component {
                 <section className="lg:flex-1 lg:flex justify-center items-center">
                      <div className="pt-4
                      lg:flex lg:flex-row flex gap-px text-sm flex-col justify-center items-center">
-                         {/* USE ICONS AND SOUND TO TIMER */}
                         <button className="lg:w-20 w-60 h-10 bg-[#333333] hover:bg-[#222222] text-[#968585]">Log</button>
                         <button className="lg:w-20 w-60 h-10 bg-[#333333] hover:bg-[#222222] text-[#AFAFAF]">FAQs</button>
                         <button className="lg:w-20 w-60 h-10 bg-[#333333] hover:bg-[#222222] text-[#807e7e]">Settings</button>
@@ -117,7 +126,7 @@ class StopTimer extends Component {
             onClick={this.handleReset}
           >
             Reset
-         </button>
+         </button>     
         </div>
       </div>
     );
